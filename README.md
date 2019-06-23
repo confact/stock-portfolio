@@ -20,6 +20,9 @@ No need for database or anything, just ruby and ruby on rails.
 4. run `rails s -b 0.0.0.0`
 5. go to http://localhost:3100
 
+## I want to see this beauty live?!
+I have deployed this to heroku, you can see it live here: https://stockportfolio-ninja.herokuapp.com
+
 ## ENV Variables
 you would need to set a env variable for the api for https://www.worldtradingdata.com.
 either add a .env file to root (where you find this file) or `/vagrant`

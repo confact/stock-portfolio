@@ -9,7 +9,7 @@ No need for database or anything, just ruby and ruby on rails.
 
 1. Install rvm/ruby 2.5.3
 2. run  `bundle install` - not working? install bundler first with `gem install bundler`
-3. run rails s -b 0.0.0.0
+3. run `rails s -b 0.0.0.0`
 4. go to http://localhost:3000
 
 ### Vagrant
@@ -18,7 +18,7 @@ No need for database or anything, just ruby and ruby on rails.
 2. run `vagrant ssh`
 3. go to `/vagrant`
 4. run `rails s -b 0.0.0.0`
-5. go to http://localhost:3000
+5. go to http://localhost:3100
 
 ## ENV Variables
 you would need to set a env variable for the api for https://www.worldtradingdata.com.

@@ -24,6 +24,10 @@ No need for database or anything, just ruby and ruby on rails.
 you would need to set a env variable for the api for https://www.worldtradingdata.com.
 either add a .env file to root (where you find this file) or `/vagrant`
 
+the .env file should contain `WORLDTRADINGDATA_TOKEN=thetoken`
+
+You can also add the env before `rails s...` , I hope you know how that is done. :)
+
 the ENV key is `WORLDTRADINGDATA_TOKEN`
 
 ## Tests

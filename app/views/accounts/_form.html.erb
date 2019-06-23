@@ -1,0 +1,41 @@
+<h2>Just type it in, Mr</h2>
+<%= simple_form_for @account do |f| %>
+  <% if @account.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@account.errors.count, "error") %> prohibited this account from being saved:</h2>
+
+      <ul>
+      <% @account.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="six columns">
+      <%= f.input :amount, as: :integer %>
+    </div>
+    <div class="six columns">
+      <%= f.input :start_date, as: :date, html5: true %>
+    </div>
+  </div>
+
+  <div class="row">
+      <% 3.times do a = Allocation.new %>
+        <div class="four columns">
+        <%= field_set_tag 'Allocation' do %>
+          <%= f.simple_fields_for 'allocations[]', a do |g| %>
+            <%= g.input :symbol %>
+            <%= g.input :percentage %>
+          <% end %>
+        <% end %>
+        </div>
+      <% end %>
+  </div>
+  <div class="row">
+    <div class="twelve columns">
+      <%= f.button :submit, class: 'button-primary' %>
+    </div>
+  </div>
+<% end %>

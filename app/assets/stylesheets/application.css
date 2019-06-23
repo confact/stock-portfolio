@@ -1,0 +1,71 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+h2 {
+  font-family: cursive;
+  font-size: 2em;
+  line-height: 1.25;
+  letter-spacing: -.1rem;
+}
+h1 {
+  font-size: 4.2rem;
+  line-height: 1.25;
+  letter-spacing: -.1rem;
+}
+
+.header {
+  margin-top: 15rem;
+  text-align: center;
+  margin-bottom: 10rem;
+}
+
+.small-header {
+  margin-top: 10rem;
+  text-align: center;
+  margin-bottom: 7rem;
+}
+
+.container {
+  max-width: 50%;
+}
+
+.six.columns.stats {
+  background-color: #ffffff;
+  border-radius: 1em;
+  box-shadow: 0px 0px 1em 0px rgba(0,0,0,0.25);
+  margin-bottom: 1em;
+  margin-left: 2%;
+  padding: 1em;
+  text-align: center;
+}
+.twelve.columns.stats {
+  background-color: #ffffff;
+  border-radius: 1em;
+  box-shadow: 0px 0px 1em 0px rgba(0,0,0,0.25);
+  margin: 1em 1em;
+  padding: 1em;
+  text-align: center;
+}
+
+.stats-info > .number {
+  font-size: 3em;
+  text-align: center;
+}
+.stats-info > .info {
+  font-size: 1em;
+  text-align: center;
+  text-transform: uppercase;
+}

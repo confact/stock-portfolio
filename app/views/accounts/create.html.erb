@@ -1,0 +1,49 @@
+<section class="small-header">
+  <h1>The amazing Portfolio, that's yours!</h1>
+</section>
+<div class="row">
+  <div class="six columns">
+    <div class="stats-info">
+      <div class="number">
+        <%=number_to_currency(@account.amount)%>
+      </div>
+      <div class="info">
+        Start Budget
+      </div>
+    </div>
+  </div>
+  <div class="six columns">
+    <div class="stats-info">
+      <div class="number">
+        <%=number_to_currency(@data.start_to_end_progress)%>
+      </div>
+      <div class="info">
+        Current Budget
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="twelve columns stats">
+    <h2>Allocation changes</h2>
+    <%= bar_chart @data.get_progress_allocations_data %>
+  </div>
+</div>
+<div class="row">
+  <div class="twelve columns stats">
+    <div class="six columns">
+      <h2>Start Allocation</h2>
+      <%= pie_chart @data.get_percentage %>
+    </div>
+    <div class="six columns">
+      <h2>Current Allocation</h2>
+      <%= pie_chart @data.get_end_percentage %>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="twelve columns stats">
+    <h2>History of your Portfolio</h2>
+    <%= line_chart @data.get_history_data %>
+  </div>
+</div>
